@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Andrei;Georgescu;;;
+FN:Andrei Georgescu
+TITLE:CEO
+ORG:GSC WORX
+TEL;TYPE=CELL:+40 766 650 607
+EMAIL;TYPE=INTERNET:john@example.com
+URL:https://www.instagram.com/gscworx/
+ADR;TYPE=WORK:;;Street 1;Bucharest;;000000;Romania
+END:VCARD
