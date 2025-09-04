@@ -3,30 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>John Doe - Digital Business Card</title>
+  <title>YOUR NAME — Connect</title>
+  <meta name="description" content="Add my contact or open my links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; margin:0; padding:0; }
-    .container { max-width:600px; margin:50px auto; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.1); }
-    h1 { margin-top:0; }
-    .button { display:block; margin:12px 0; padding:14px; text-align:center; border-radius:8px; text-decoration:none; font-weight:bold; }
-    .contact { background:#007aff; color:#fff; }
-    .instagram { background:#e1306c; color:#fff; }
-    .email { background:#34a853; color:#fff; }
-    .phone { background:#4285f4; color:#fff; }
+    :root { --bg:#0f1222; --card:#171a2f; --text:#e8ebff; --muted:#a9b1d6; --accent:#8ab4ff; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:radial-gradient(1200px 800px at 80% -10%,#1a1f3b,transparent), var(--bg); color:var(--text);}
+    .wrap{min-height:100dvh; display:grid; place-items:center; padding:24px}
+    .card{width:100%; max-width:520px; background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.07); border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.35); padding:28px}
+    .top{display:flex; gap:16px; align-items:center;}
+    .avatar{width:72px; height:72px; border-radius:16px; background:#222845; display:grid; place-items:center; font-weight:800; font-size:26px; letter-spacing:.5px}
+    h1{font-size:26px; line-height:1.15; margin:0}
+    .role{color:var(--muted); margin-top:6px; font-size:14px}
+    .cta{display:grid; gap:12px; margin:22px 0}
+    a.button{display:flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; background:var(--card); color:var(--text); border:1px solid rgba(255,255,255,.08); padding:14px 16px; border-radius:14px; font-weight:600; transition:.2s transform, .2s opacity, .2s box-shadow}
+    a.button:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .accent{background:linear-gradient(90deg,#7aa2ff,#60e7ff); color:#0b1220; border:none}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .links{display:grid; gap:10px; margin-top:8px}
+    .note{color:var(--muted); font-size:12px; margin-top:16px}
+    footer{margin-top:18px; display:flex; align-items:center; justify-content:space-between; font-size:12px; color:var(--muted)}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>John Doe</h1>
-    <p>Founder · My Company · Bucharest</p>
+  <div class="wrap">
+    <main class="card" role="main">
+      <div class="top">
+        <div class="avatar">YN</div>
+        <div>
+          <h1>Andrei Georgescu</h1>
+          <div class="role">CEO</div>
+        </div>
+      </div>
 
-    <!-- Add to Contacts -->
-    <a class="button contact" href="yourname.vcf" download>➕ Add to Contacts</a>
+      <div class="cta">
+        <!-- 1) Direct add-to-contacts (downloads/opens your .vcf) -->
+        <a class="button accent" href="Andrei Georgescu.vcf" download>➕ Add to Contacts</a>
 
-    <!-- Social / Website links -->
-    <a class="button instagram" href="https://www.instagram.com/gscworx/" target="_blank">📷 Instagram</a>
-    <a class="button email" href="mailto:john@example.com">✉️ Email</a>
-    <a class="button phone" href="tel:+40123456789">📞 Call</a>
+        <!-- 2) Visit your primary link (site, portfolio, Linktree, etc.) -->
+        <a class="button" href="https://www.instagram.com/gscworx/" target="_blank" rel="noopener">📷 Open Instagram</a>
+      </div>
+
+      <div class="grid">
+        <a class="button" href="tel:+40766650607">📞 Call</a>
+        <a class="button" href="mailto:you@example.com">✉️ Email</a>
+      </div>
+
+      <div class="links">
+        <a class="button" href="https://your-website.example" target="_blank" rel="noopener">🌐 Website</a>
+        <a class="button" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="button" href="https://t.me/yourusername" target="_blank" rel="noopener">💬 Telegram</a>
+      </div>
+
+      <p class="note">Tip: Save me as a contact to keep all my links handy. Works on iPhone and Android.</p>
+
+      <footer>
+        <span>© YOUR NAME</span>
+        <span>Made for NFC tap</span>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
+
+
